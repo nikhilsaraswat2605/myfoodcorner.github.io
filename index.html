@@ -28,7 +28,11 @@
     #About {
       margin: auto;
     }
-
+    
+     #successmsgorder{
+      color: rgb(54, 241, 126);
+      font-weight: bold;
+    }
     footer {
       background-color: #ddddec29;
     }
@@ -243,6 +247,10 @@
       <div class="col-12">
         <button type="submit" class="btn btn-primary" onclick="myorder()">Order Now</button>
       </div>
+       <div>
+        <p id="successmsgorder"></p>
+      </div>
+      
     </form>
   </div>
 
@@ -320,7 +328,8 @@
   
    <script>
     function myorder() {
-      confirm("Please confirm your order!");
+     var res= confirm("Please confirm your order!");
+     if(res==true)document.getElementById("successmsgorder").innerHTML = "ORDERD SUCCESSFULLY !";
     }
     function mysubmission() {
       confirm("Please confirm!");
